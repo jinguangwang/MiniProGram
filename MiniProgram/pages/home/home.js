@@ -1,7 +1,6 @@
 
 const app = getApp()
 
-console.log(app.globalData)
 
 Page({
   data:{
@@ -36,6 +35,20 @@ Page({
   },
   getUserInfo(event){
     console.log(event)
+  },
+
+  // 监听页面的生命周围函数------------
+  /**
+   * 页面被加载出来执行onLoad 方法
+   */
+  onLoad(){
+    consolel.log('onload')
+  },
+  onShow(){
+    consolel.log('onshow')
+  },
+  onHide(){
+    consolel.log('onhide')
   }
 
 })
