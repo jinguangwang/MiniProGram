@@ -1,0 +1,22 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs的基本用法 -->
+
+<!--  1定义的方式 -->
+
+<wxs module="wxs">
+   var message = "hello world";
+   var name = 'whg';
+
+   var sum = function(num1,num2){
+   return num1+ num2
+   }
+   
+
+   module.exports = {
+    message:message,
+    name:name
+   }
+</wxs>
+
+<view>{{wxs.message}}</view>
+<view>{{wxs.name}}</view>

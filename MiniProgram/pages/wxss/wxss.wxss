@@ -1,0 +1,11 @@
+/* pages/wxss/wxss.wxss */
+
+.box{
+  color:blue;
+}
+.container{
+  color: black;
+}
+.active{
+  color:red;
+}

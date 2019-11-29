@@ -1,4 +1,4 @@
-// pages/profile/prpfile.js
+// pages/wxs/wxs.js
 Page({
 
   /**

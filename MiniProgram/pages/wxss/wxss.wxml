@@ -1,0 +1,40 @@
+<!-- Mush语法 -->
+
+<view>{{message}}</view>
+<view>{{age>20?'就好':'aa'}}</view>
+<view>{{nowTime}}</view>
+
+<button size='mini' bindtap="handleColor">点击切换颜色</button>
+<view class='{{isActive? "active" :""}}'>哈哈哈哈</view>
+
+<!-- 条件判断 -->
+
+<view wx:if="{{isShow}}">哈哈哈哈</view>
+
+
+<view>-------------------</view>
+<!-- wx:for--- -->
+<!-- wx:for 遍历数组/字符串等 -->
+
+<!-- <view wx:for="{{'abcd'}}">{{item}}-{{index}}</view> -->
+<!-- <view wx:for="{{10}}">{{item}} </view> -->
+
+<!-- block 标签 -->
+
+<!-- 3 item index 起名字 -->
+<view wx:for="{{movies}}" wx:for-item="move">{{move}}</view>
+
+<view>-------------------</view>
+<!--4  模版 template
+  之前小程序不支持自定义组件，为了进行代码的复用：template
+
+   模版中包裹的内容，在使用前，是不会进行任何的渲染的
+ -->
+ <template name="contentItem">
+   <button size="mini">{{btnText}}</button>
+   <view>{{content}}</view>
+ </template>
+ 
+ <template is="contentItem" data="{{btnText:'按钮呀',content:'😄'}}"/>
+ <template is="contentItem" data="{{btnText:'登录' ,content:'h'}}"/>
+ <template is="contentItem" data="{{btnText:'点击',content:'😄'}}"/>
